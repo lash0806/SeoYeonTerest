@@ -45,19 +45,6 @@ main#gallery {
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.tweet-wrapper .twitter-tweet {
-  max-width: 100% !important;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.tweet-wrapper iframe {
-  max-width: 100% !important;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 .tweet-usericon {
   position: absolute;
