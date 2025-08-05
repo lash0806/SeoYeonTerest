@@ -61,7 +61,7 @@ main#gallery {
 }
 @media (max-width: 600px) {
   main#gallery {
-    column-count: 1;
+    column-count: 2;
   }
 }
 .card {
