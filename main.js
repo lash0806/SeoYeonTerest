@@ -18,6 +18,7 @@ fetch('x_links.txt')
         iconImg.src = `icons/${icon}`;
         iconImg.alt = '投稿者アイコン';
         iconImg.className = 'tweet-usericon';
+        iconImg.style.opacity = '0';
         wrapper.appendChild(iconImg);
       }
       // ツイート埋め込み
@@ -29,6 +30,19 @@ fetch('x_links.txt')
     });
     if(window.twttr && window.twttr.widgets) {
       window.twttr.widgets.load(gallery);
+      // アイコンをツイート表示と同時にフェードイン
+      const observer = new MutationObserver(() => {
+        document.querySelectorAll('.tweet-wrapper').forEach(wrapper => {
+          const iframe = wrapper.querySelector('iframe');
+          const icon = wrapper.querySelector('.tweet-usericon');
+          if(iframe && icon && icon.style.opacity !== '1') {
+            icon.style.opacity = '1';
+          }
+        });
+      });
+      observer.observe(gallery, {childList: true, subtree: true});
+      // 5秒後に自動で監視終了（無限監視防止）
+      setTimeout(() => observer.disconnect(), 5000);
     }
   })
   .catch(err => {

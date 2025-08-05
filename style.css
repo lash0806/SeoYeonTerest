@@ -58,6 +58,7 @@ main#gallery {
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   z-index: 10;
   object-fit: cover;
+  transition: opacity 0.4s;
 }
 @media (max-width: 600px) {
   main#gallery {
