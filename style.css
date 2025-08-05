@@ -74,28 +74,8 @@ main#gallery {
 }
 @media (max-width: 600px) {
   main#gallery {
-    display: flex;
-    flex-wrap: wrap;
-    column-count: unset;
-    gap: 0.5rem;
-    padding: 0 0.2rem;
-    max-width: 100%;
-  }
-  .tweet-wrapper {
-    width: calc(50% - 0.25rem);
-    margin-bottom: 0.5rem;
-    height: auto !important;
-    min-height: 0 !important;
-  }
-  .tweet-wrapper .twitter-tweet,
-  .tweet-wrapper iframe {
-    transform: scale(0.8);
-    transform-origin: top left;
-    width: 125% !important;
-    max-width: 125% !important;
-    margin-bottom: -40px;
-    margin-right: -20px;
-    height: auto !important;
+column-count: 1;
+    padding: 0 0.5rem;
   }
   .site-logo {
     max-width: 90vw;
@@ -105,6 +85,7 @@ main#gallery {
     height: 38px;
     top: 8px;
     left: 8px;
+
   }
 }
 .card {
