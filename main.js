@@ -29,6 +29,21 @@ fetch('x_links.txt')
     });
     if(window.twttr && window.twttr.widgets) {
       window.twttr.widgets.load(gallery);
+      // ツイート埋め込み完了後に高さ調整
+      window.twttr.events && window.twttr.events.bind('rendered', adjustTweetHeights);
+      // 念のためロード後にも実行
+      setTimeout(adjustTweetHeights, 1500);
+      window.addEventListener('resize', adjustTweetHeights);
+    }
+
+    function adjustTweetHeights() {
+      if(window.innerWidth > 600) return; // スマホのみ
+      document.querySelectorAll('.tweet-wrapper').forEach(wrapper => {
+        const iframe = wrapper.querySelector('iframe');
+        if(iframe && iframe.offsetHeight > 0) {
+          wrapper.style.height = (iframe.offsetHeight * 0.8) + 'px';
+        }
+      });
     }
   })
   .catch(err => {
