@@ -40,11 +40,20 @@ fetch('x_links.txt')
       if(window.innerWidth > 600) return; // スマホのみ
       document.querySelectorAll('.tweet-wrapper').forEach(wrapper => {
         const iframe = wrapper.querySelector('iframe');
-        if(iframe && iframe.offsetHeight > 0) {
-          wrapper.style.height = (iframe.offsetHeight * 0.8) + 'px';
+        if(iframe) {
+          let h = iframe.offsetHeight;
+          if(h === 0 && iframe.getBoundingClientRect) {
+            h = iframe.getBoundingClientRect().height;
+          }
+          if(h > 0) {
+            wrapper.style.height = (h * 0.8) + 'px';
+          }
         }
       });
     }
+    // 1秒ごとに高さ再調整（Safari等の遅延対策）
+    setInterval(adjustTweetHeights, 1000);
+
   })
   .catch(err => {
     document.getElementById('gallery').innerHTML = '<p>X投稿リストの読み込みに失敗しました。</p>';
