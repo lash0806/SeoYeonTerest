@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Meiryo', sans-serif;
+  background: #fafafa;
+}
+header {
+  background: #22aeff;
+  color: white;
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+header p {
+  font-family: 'Segoe UI', 'Meiryo', sans-serif;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #fffbe7;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  line-height: 1.2;
+}
+
+.site-logo {
+  max-width: 320px;
+  width: 80vw;
+  height: auto;
+  display: inline-block;
+  margin: 0 auto 0.5rem auto;
+}
+@media (max-width: 600px) {
+  .site-logo {
+    max-width: 90vw;
+  }
+}
+main#gallery {
+  column-count: 4;
+  column-gap: 1.5rem;
+  margin: 2rem auto 1rem auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.tweet-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.tweet-usericon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  background: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 10;
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  main#gallery {
+    column-count: 1;
+  }
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: block;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s;
+  break-inside: avoid;
+}
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.card img {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+.card .caption {
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+.card .x-link {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 0.9rem;
+  color: #22aeff;
+  text-decoration: none;
+  word-break: break-all;
+}
+.card .x-link:hover {
+  text-decoration: underline;
+}
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  padding: 1rem 0 2rem 0;
+  background: none;
+}
+
+

@@ -1,0 +1,17 @@
+[
+  {
+    "image": "https://pbs.twimg.com/media/EXAMPLE1.jpg",
+    "caption": "素敵な風景 #旅 #X投稿",
+    "x_url": "https://x.com/exampleuser/status/1234567890"
+  },
+  {
+    "image": "https://pbs.twimg.com/media/EXAMPLE2.jpg",
+    "caption": "美味しいスイーツ！",
+    "x_url": "https://x.com/exampleuser/status/1234567891"
+  },
+  {
+    "image": "https://pbs.twimg.com/media/EXAMPLE3.jpg",
+    "caption": "可愛いペットと一緒に🐶",
+    "x_url": "https://x.com/exampleuser/status/1234567892"
+  }
+]
