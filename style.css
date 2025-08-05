@@ -74,6 +74,7 @@ main#gallery {
 }
 @media (max-width: 600px) {
   main#gallery {
+<<<<<<< HEAD
 column-count: 1;
     padding: 0 0.5rem;
   }
@@ -86,6 +87,9 @@ column-count: 1;
     top: 8px;
     left: 8px;
 
+=======
+    column-count: 2;
+>>>>>>> parent of 7601c17 (fix: スマホ2列時の見切れ余白調整)
   }
 }
 .card {
