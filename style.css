@@ -61,19 +61,11 @@ main#gallery {
 }
 @media (max-width: 600px) {
   main#gallery {
-<<<<<<< HEAD
-<<<<<<< HEAD
 column-count: 1;
     padding: 0 0.5rem;
-=======
-    column-count: 2;
-    column-gap: 0.5rem;
-    padding: 0 0.2rem;
-    max-width: 100%;
   }
   .tweet-wrapper {
     width: 100%;
->>>>>>> parent of a07e580 (fix: スマホ2カラム時にツイートを縮小して見切れ防止)
   }
   .site-logo {
     max-width: 90vw;
@@ -84,9 +76,6 @@ column-count: 1;
     top: 8px;
     left: 8px;
 
-=======
-    column-count: 2;
->>>>>>> parent of 7601c17 (fix: スマホ2列時の見切れ余白調整)
   }
 }
 .card {
