@@ -48,10 +48,10 @@ main#gallery {
 }
 .tweet-usericon {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 48px;
-  height: 48px;
+  top: 8px;
+  left: 8px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 2.5px solid #fff;
   background: #eee;
